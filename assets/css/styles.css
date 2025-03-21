@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --font-heading: "Sen";
+}
+
 html {
     font-size: 62.5%;
 }
@@ -25,13 +29,18 @@ a {
 .btn {
     display: inline-block;
     min-width: 118px;
-    padding: 14px 0;
+    padding: 0 16px;
+    line-height: 50px;
     color: #fff;
     text-align: center;
     font-size: 1.6rem;
     font-weight: 600;
     border-radius: 24.5px;
     background: #171100;
+}
+
+.btn:hover {
+    opacity: 0.8;
 }
 
 /* Header */
@@ -43,6 +52,7 @@ a {
 .fixed {
     position: sticky;
     top: -28px;
+    z-index: 10;
 }
 
 .header .body {
@@ -85,6 +95,7 @@ a {
     border-radius: 1px;
     background: #171100;
     opacity: 0;
+    transition: opacity 0.15s;
 }
 
 .nav a:active::after {
@@ -97,4 +108,174 @@ a {
 
 .header .signup-btn {
     min-width: 144px;
+}
+
+.hero {
+    padding-top: 56px;
+    padding-bottom: 65px;
+    background-color: #fffcf4;
+}
+
+.hero .body {
+    display: flex;
+}
+
+/* Hero Left */
+
+.hero .media-block {
+    position: relative;
+    width: 48%;
+}
+
+.hero .media-block .img {
+    width: 470px;
+    height: 685px;
+    object-fit: cover;
+    border-radius: 20px;
+    vertical-align: bottom;
+}
+
+.hero .hero-summary {
+    position: absolute;
+    bottom: 48px;
+    right: 0;
+    width: 270px;
+    padding: 24px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.hero-summary .item {
+    display: flex;
+    align-items: center;
+}
+
+.hero-summary .item + .item {
+    margin-top: 22px;
+}
+
+.hero .item .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #fff9e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-summary .item:nth-child(2) .icon {
+    background-color: #fcefff;
+}
+
+.hero-summary .item:nth-child(3) .icon {
+    background-color: #ebeaff;
+}
+
+.hero .item .info {
+    margin-left: 16px;
+}
+
+.hero .info .label {
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.85714; /* 185.714% */
+}
+
+.hero .info .title {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67; /* 166.667% */
+}
+
+/* Hero Right */
+.hero .content-block {
+    width: 52%;
+    padding: 64px 0 0 130px;
+}
+
+.hero .content-block .heading {
+    color: #171100;
+    font-family: "Sen", "Poppins", "sans-serif";
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 1.17; /* 117.241% */
+    letter-spacing: -0.02em;
+}
+
+.hero .content-block .desc {
+    margin-top: 22px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.67; /* 166.667% */
+}
+
+.hero .content-block .cta-group {
+    display: flex;
+    align-items: center;
+    margin: 38px 0 48px;
+}
+
+.hero .content-block .cta-group .cta-btn {
+    margin-right: 28px;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-radius: 32px;
+    background: #ffb900;
+    min-width: 180px;
+    line-height: 64px;
+}
+
+.hero .cta-group .watch-video {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #fffcf4;
+    cursor: pointer;
+}
+
+.hero .cta-group .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin-right: 14px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+}
+
+.hero .cta-group span {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67; /* 166.667% */
+}
+
+.hero .stats {
+    margin-top: 8px;
+    display: flex;
+}
+
+.hero .stats .desc {
+    margin-top: 0;
+}
+
+.hero .stats .desc:first-child {
+    margin-right: 28px;
+}
+
+.hero .stats strong {
+    color: #171100;
+    font-family: var(--font-heading), "Poppins";
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.227; /* 122.727% */
+    padding-right: 12px;
 }
